@@ -7,6 +7,7 @@ import android.widget.Button
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.TextView
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -31,7 +32,8 @@ class MainActivity : AppCompatActivity() {
 
         myButton = findViewById(R.id.button)
         myButton.setOnClickListener {
-            // Do something when button is clicked
+            val intent = Intent(this, Mainscreen::class.java)
+            startActivity(intent)
         }
 
         textView = findViewById(R.id.textView)
@@ -63,4 +65,6 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
     }
 }
+
+
 
